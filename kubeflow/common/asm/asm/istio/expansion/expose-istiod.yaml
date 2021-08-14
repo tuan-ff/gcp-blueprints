@@ -1,4 +1,3 @@
----
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
@@ -28,7 +27,7 @@ spec:
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: istiod-vs # {"$ref":"#/definitions/io.k8s.cli.setters.anthos.servicemesh.istiod-vs-name"}
+  name: istiod-vs # kpt-set: ${anthos.servicemesh.istiod-vs-name}
   namespace: istio-system
 spec:
   hosts:
@@ -39,18 +38,18 @@ spec:
     - match:
         - port: 15012
           sniHosts:
-            - istiod.istio-system.svc # {"$ref":"#/definitions/io.k8s.cli.setters.anthos.servicemesh.istiodHost"}
+            - istiod.istio-system.svc # kpt-set: ${anthos.servicemesh.istiodHost}
       route:
         - destination:
-            host: istiod.istio-system.svc.cluster.local # {"$ref":"#/definitions/io.k8s.cli.setters.anthos.servicemesh.istiodHostFQDN"}
+            host: istiod.istio-system.svc.cluster.local # kpt-set: ${anthos.servicemesh.istiodHostFQDN}
             port:
               number: 15012
     - match:
         - port: 15017
           sniHosts:
-            - istiod.istio-system.svc # {"$ref":"#/definitions/io.k8s.cli.setters.anthos.servicemesh.istiodHost"}
+            - istiod.istio-system.svc # kpt-set: ${anthos.servicemesh.istiodHost}
       route:
         - destination:
-            host: istiod.istio-system.svc.cluster.local # {"$ref":"#/definitions/io.k8s.cli.setters.anthos.servicemesh.istiodHostFQDN"}
+            host: istiod.istio-system.svc.cluster.local # kpt-set: ${anthos.servicemesh.istiodHostFQDN}
             port:
               number: 443

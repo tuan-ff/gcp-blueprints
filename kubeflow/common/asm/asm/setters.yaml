@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: setters
+data:
+  anthos.servicemesh.canonicalServiceHub: gcr.io/gke-release/asm/canonical-service-controller:1.7.3-asm.6
+  anthos.servicemesh.controlplane.monitoring.enabled: "true"
+  anthos.servicemesh.controlplane.validation-url: VALIDATION_URL
+  anthos.servicemesh.custom-ingressgateway-name: INGRESSGATEWAY_NAME
+  anthos.servicemesh.custom-ingressgateway-namespace: istio-system
+  anthos.servicemesh.external_ca.ca_name: ""
+  anthos.servicemesh.hub: gcr.io/gke-release/asm
+  anthos.servicemesh.hubMembershipID: MEMBERSHIP_ID
+  anthos.servicemesh.istiod-vs-name: istiod-vs
+  anthos.servicemesh.istiodHost: istiod.istio-system.svc
+  anthos.servicemesh.istiodHostFQDN: istiod.istio-system.svc.cluster.local
+  anthos.servicemesh.managed-controlplane.cloudrun-addr: CLOUDRUN_ADDR
+  anthos.servicemesh.rev: ASM_REV
+  anthos.servicemesh.tag: 1.9.0-asm.3
+  anthos.servicemesh.trustDomainAliases: ""
+  base-dir: base
+  gcloud.compute.location: us-central1-c
+  gcloud.compute.network: default
+  gcloud.compute.subnetwork: default
+  gcloud.container.cluster: asm-cluster
+  gcloud.container.cluster.clusterSecondaryRange: ""
+  gcloud.container.cluster.ingress.httpPort: "31224"
+  gcloud.container.cluster.ingress.statusPort: "31223"
+  gcloud.container.cluster.releaseChannel: REGULAR
+  gcloud.container.cluster.servicesSecondaryRange: ""
+  gcloud.container.nodepool.max-nodes: "4"
+  gcloud.core.project: PROJECT
+  gcloud.project.environProjectID: ENVIRON_PROJECT_ID
+  gcloud.project.environProjectNumber: PROJECT_NUMBER
+  gcloud.project.projectNumber: PROJECT_NUMBER

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: setters
+data:
+  name: KUBEFLOW-NAME
+  email: EMAIL
+  gcloud.core.project: PROJECT
+  gke.private: "false"
+  kustomize_manifests_path: ../../../upstream/manifests
+  location: LOCATION
+  mgmt-ctxt: MANAGEMENT-CTXT

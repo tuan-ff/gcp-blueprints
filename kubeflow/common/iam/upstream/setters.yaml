@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: setters
+data:
+  name: KUBEFLOW-NAME
+  enable-private-endpoint: "false"
+  gcloud.compute.region: REGION
+  gcloud.compute.zone: ZONE
+  gcloud.core.project: PROJECT
+  location: LOCATION
+  log-firewalls: "false"
+  master-global-access-enabled: "true"
+  master-ip-cidr-block: 172.16.0.32/28
+  mgmt-location: us-central1-f
+  mgmt-name: mgmt-name
+  mgmt-project: mgmt-project-id
+  node-locations: |
+    - ZONE

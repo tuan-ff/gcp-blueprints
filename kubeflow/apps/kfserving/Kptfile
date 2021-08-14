@@ -1,19 +1,10 @@
-apiVersion: kpt.dev/v1alpha1
+apiVersion: kpt.dev/v1
 kind: Kptfile
 metadata:
   name: KFServing
-packageMetadata:
-  shortDescription: KFServing package
-openAPI:
-  definitions:
-    io.k8s.cli.setters.name:
-      x-k8s-cli:
-        setter:
-          name: name
-          value: KUBEFLOW-NAME
-          isSet: true
-    io.k8s.cli.setters.gcloud.core.project:
-      x-k8s-cli:
-        setter:
-          name: gcloud.core.project
-          value: PROJECT
+info:
+  description: KFServing package
+pipeline:
+  mutators:
+  - image: gcr.io/kpt-fn/apply-setters:v0.1
+    configPath: setters.yaml

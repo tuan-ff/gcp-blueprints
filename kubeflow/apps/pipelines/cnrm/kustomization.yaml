@@ -11,12 +11,11 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: PROJECT # {"$kpt-set":"gcloud.core.project"}
+namespace: PROJECT # kpt-set: ${gcloud.core.project}
 commonLabels:
-  kf-name: KUBEFLOW-NAME # {"$kpt-set":"name"}
+  kf-name: KUBEFLOW-NAME # kpt-set: ${name}
   app: kubeflow-pipelines
 resources:
 - ../cloudsql/cnrm

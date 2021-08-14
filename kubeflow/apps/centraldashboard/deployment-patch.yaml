@@ -9,17 +9,17 @@ spec:
       - name: centraldashboard
         env:
         - name: USERID_HEADER
-          value: null
           valueFrom:
             configMapKeyRef:
               name: kubeflow-config
               key: userid-header
-        - name: USERID_PREFIX
           value: null
+        - name: USERID_PREFIX
           valueFrom:
             configMapKeyRef:
               name: kubeflow-config
               key: userid-prefix
+          value: null
         - name: REGISTRATION_FLOW
           # Change this value to false to disable self-registration in
           # Kubeflow Central Dashboard.

@@ -11,14 +11,12 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: v1
 kind: Namespace
 metadata:
   name: knative-serving
   labels:
     serving.knative.dev/release: "v0.22.0"
-
 ---
 # Copyright 2019 The Knative Authors
 #
@@ -33,7 +31,6 @@ metadata:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
@@ -55,7 +52,6 @@ rules:
       - get
       - list
       - watch
-
 ---
 # Copyright 2019 The Knative Authors
 #
@@ -70,7 +66,6 @@ rules:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
@@ -112,7 +107,6 @@ rules:
   - apiGroups: ["serving.knative.dev", "networking.internal.knative.dev", "autoscaling.internal.knative.dev", "caching.internal.knative.dev"]
     resources: ["*"]
     verbs: ["get", "list", "watch"]
-
 ---
 # Copyright 2019 The Knative Authors
 #
@@ -127,7 +121,6 @@ rules:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
@@ -163,7 +156,6 @@ rules:
   - apiGroups: ["caching.internal.knative.dev"]
     resources: ["images"]
     verbs: ["get", "list", "create", "update", "delete", "patch", "watch"]
-
 ---
 # Copyright 2019 The Knative Authors
 #
@@ -178,7 +170,6 @@ rules:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
@@ -198,7 +189,6 @@ rules:
       - list
       - watch
       - patch
-
 ---
 # Copyright 2018 The Knative Authors
 #
@@ -213,7 +203,6 @@ rules:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -248,7 +237,6 @@ roleRef:
   kind: ClusterRole
   name: knative-serving-admin
   apiGroup: rbac.authorization.k8s.io
-
 ---
 # Copyright 2018 The Knative Authors
 #
@@ -263,7 +251,6 @@ roleRef:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -300,7 +287,6 @@ spec:
         - name: Image
           type: string
           jsonPath: .spec.image
-
 ---
 # Copyright 2020 The Knative Authors
 #
@@ -315,7 +301,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -356,7 +341,6 @@ spec:
     shortNames:
       - kcert
   scope: Namespaced
-
 ---
 # Copyright 2019 The Knative Authors
 #
@@ -371,7 +355,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -421,7 +404,6 @@ spec:
       - config
       - cfg
   scope: Namespaced
-
 ---
 # Copyright 2020 The Knative Authors
 #
@@ -436,7 +418,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -478,7 +459,6 @@ spec:
       - kingress
       - king
   scope: Namespaced
-
 ---
 # Copyright 2019 The Knative Authors
 #
@@ -493,7 +473,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -532,7 +511,6 @@ spec:
       - knative-internal
       - autoscaling
   scope: Namespaced
-
 ---
 # Copyright 2018 The Knative Authors
 #
@@ -547,7 +525,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -595,7 +572,6 @@ spec:
       - kpa
       - pa
   scope: Namespaced
-
 ---
 # Copyright 2019 The Knative Authors
 #
@@ -610,7 +586,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -661,7 +636,6 @@ spec:
     shortNames:
       - rev
   scope: Namespaced
-
 ---
 # Copyright 2019 The Knative Authors
 #
@@ -676,7 +650,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -722,7 +695,6 @@ spec:
     shortNames:
       - rt
   scope: Namespaced
-
 ---
 # Copyright 2019 The Knative Authors
 #
@@ -737,7 +709,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -790,7 +761,6 @@ spec:
     shortNames:
       - sks
   scope: Namespaced
-
 ---
 # Copyright 2019 The Knative Authors
 #
@@ -805,7 +775,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -921,7 +890,6 @@ spec:
       - kservice
       - ksvc
   scope: Namespaced
-
 ---
 # Copyright 2018 The Knative Authors
 #
@@ -936,7 +904,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: caching.internal.knative.dev/v1alpha1
 kind: Image
 metadata:
@@ -948,7 +915,6 @@ spec:
   # This is the Go import path for the binary that is containerized
   # and substituted here.
   image: gcr.io/knative-releases/knative.dev/serving/cmd/queue@sha256:6cd0c234bfbf88ac75df5243c2f9213dcc9def610414c506d418f9388187b771
-
 ---
 # Copyright 2018 The Knative Authors
 #
@@ -963,7 +929,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -1153,7 +1118,6 @@ data:
     # (including a maxScale of "0" = unlimited) is disallowed.
     # A value of zero (the default) allows any limit, including unlimited.
     max-scale-limit: "0"
-
 ---
 # Copyright 2019 The Knative Authors
 #
@@ -1168,7 +1132,6 @@ data:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -1287,7 +1250,6 @@ data:
     # to set this value to `false`.
     # See https://github.com/knative/serving/issues/8498.
     enable-service-links: "false"
-
 ---
 # Copyright 2019 The Knative Authors
 #
@@ -1302,7 +1264,6 @@ data:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -1368,7 +1329,6 @@ data:
     # for the queue proxy sidecar container.
     # If omitted, no value is specified and the system default is used.
     queueSidecarEphemeralStorageLimit: "1024Mi"
-
 ---
 # Copyright 2018 The Knative Authors
 #
@@ -1383,7 +1343,6 @@ data:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -1431,7 +1390,6 @@ data:
     svc.cluster.local: |
       selector:
         app: secret
-
 ---
 # Copyright 2020 The Knative Authors
 #
@@ -1446,7 +1404,6 @@ data:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -1567,7 +1524,6 @@ data:
     # 1. Enabled: http2 connection will be attempted via upgrade.
     # 2. Disabled: http2 connection will only be attempted when port name is set to "h2c".
     autodetect-http2: "disabled"
-
 ---
 # Copyright 2018 The Knative Authors
 #
@@ -1582,7 +1538,6 @@ data:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -1665,7 +1620,6 @@ data:
     # Maximum number of non-active revisions to retain
     # or "disabled" to disable any maximum limit.
     max-non-active-revisions: "1000"
-
 ---
 # Copyright 2020 The Knative Authors
 #
@@ -1680,7 +1634,6 @@ data:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -1725,7 +1678,6 @@ data:
     # bucket will take care of the reconciling for the keys partitioned into
     # that bucket.
     buckets: "1"
-
 ---
 # Copyright 2018 The Knative Authors
 #
@@ -1740,7 +1692,6 @@ data:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -1803,7 +1754,6 @@ data:
     loglevel.certcontroller: "info"
     loglevel.istiocontroller: "info"
     loglevel.nscontroller: "info"
-
 ---
 # Copyright 2018 The Knative Authors
 #
@@ -1818,7 +1768,6 @@ data:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -1936,7 +1885,6 @@ data:
     # NOTE: This flag is in an alpha state and is mostly here to enable internal testing
     #       for now. Use with caution.
     enable-mesh-pod-addressability: "false"
-
 ---
 # Copyright 2018 The Knative Authors
 #
@@ -1951,7 +1899,6 @@ data:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -2056,7 +2003,6 @@ data:
     # enabled, the Knative Serving pods expose the profiling data on an alternate HTTP port 8008.
     # The HTTP context root for profiling is then /debug/pprof/.
     profiling.enable: "false"
-
 ---
 # Copyright 2019 The Knative Authors
 #
@@ -2071,7 +2017,6 @@ data:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -2116,7 +2061,6 @@ data:
 
     # Percentage (0-1) of requests to trace
     sample-rate: "0.1"
-
 ---
 # Copyright 2020 The Knative Authors
 #
@@ -2131,7 +2075,6 @@ data:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
@@ -2170,7 +2113,6 @@ spec:
   selector:
     matchLabels:
       app: activator
-
 ---
 # Copyright 2018 The Knative Authors
 #
@@ -2185,7 +2127,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -2311,7 +2252,6 @@ spec:
       port: 81
       targetPort: 8013
   type: ClusterIP
-
 ---
 # Copyright 2018 The Knative Authors
 #
@@ -2326,7 +2266,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -2440,7 +2379,6 @@ spec:
       targetPort: 8080
   selector:
     app: autoscaler
-
 ---
 # Copyright 2018 The Knative Authors
 #
@@ -2455,7 +2393,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -2546,7 +2483,6 @@ spec:
       targetPort: 8008
   selector:
     app: controller
-
 ---
 # Copyright 2020 The Knative Authors
 #
@@ -2561,7 +2497,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
@@ -2598,7 +2533,6 @@ spec:
   selector:
     matchLabels:
       app: webhook
-
 ---
 # Copyright 2018 The Knative Authors
 #
@@ -2613,7 +2547,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -2736,7 +2669,6 @@ spec:
       targetPort: 8443
   selector:
     role: webhook
-
 ---
 # Copyright 2020 The Knative Authors
 #
@@ -2751,7 +2683,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: admissionregistration.k8s.io/v1
 kind: ValidatingWebhookConfiguration
 metadata:
@@ -2772,7 +2703,6 @@ webhooks:
         - key: serving.knative.dev/release
           operator: Exists
     timeoutSeconds: 10
-
 ---
 # Copyright 2020 The Knative Authors
 #
@@ -2787,7 +2717,6 @@ webhooks:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: admissionregistration.k8s.io/v1
 kind: MutatingWebhookConfiguration
 metadata:
@@ -2804,7 +2733,6 @@ webhooks:
     sideEffects: None
     name: webhook.serving.knative.dev
     timeoutSeconds: 10
-
 ---
 # Copyright 2020 The Knative Authors
 #
@@ -2819,7 +2747,6 @@ webhooks:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: admissionregistration.k8s.io/v1
 kind: ValidatingWebhookConfiguration
 metadata:
@@ -2836,7 +2763,6 @@ webhooks:
     sideEffects: None
     name: validation.webhook.serving.knative.dev
     timeoutSeconds: 10
-
 ---
 # Copyright 2020 The Knative Authors
 #
@@ -2851,7 +2777,6 @@ webhooks:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: v1
 kind: Secret
 metadata:
@@ -2860,5 +2785,3 @@ metadata:
   labels:
     serving.knative.dev/release: "v0.22.0"
 # The data is populated at install time.
-
----

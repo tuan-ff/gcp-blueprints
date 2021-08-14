@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: setters
+data:
+  name: KUBEFLOW-NAME
+  asm-label: ASM-LABEL

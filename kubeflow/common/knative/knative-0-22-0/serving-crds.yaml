@@ -11,7 +11,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -52,7 +51,6 @@ spec:
     shortNames:
       - kcert
   scope: Namespaced
-
 ---
 # Copyright 2019 The Knative Authors
 #
@@ -67,7 +65,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -117,7 +114,6 @@ spec:
       - config
       - cfg
   scope: Namespaced
-
 ---
 # Copyright 2020 The Knative Authors
 #
@@ -132,7 +128,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -174,7 +169,6 @@ spec:
       - kingress
       - king
   scope: Namespaced
-
 ---
 # Copyright 2019 The Knative Authors
 #
@@ -189,7 +183,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -228,7 +221,6 @@ spec:
       - knative-internal
       - autoscaling
   scope: Namespaced
-
 ---
 # Copyright 2018 The Knative Authors
 #
@@ -243,7 +235,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -291,7 +282,6 @@ spec:
       - kpa
       - pa
   scope: Namespaced
-
 ---
 # Copyright 2019 The Knative Authors
 #
@@ -306,7 +296,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -357,7 +346,6 @@ spec:
     shortNames:
       - rev
   scope: Namespaced
-
 ---
 # Copyright 2019 The Knative Authors
 #
@@ -372,7 +360,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -418,7 +405,6 @@ spec:
     shortNames:
       - rt
   scope: Namespaced
-
 ---
 # Copyright 2019 The Knative Authors
 #
@@ -433,7 +419,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -486,7 +471,6 @@ spec:
     shortNames:
       - sks
   scope: Namespaced
-
 ---
 # Copyright 2019 The Knative Authors
 #
@@ -501,7 +485,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -617,7 +600,6 @@ spec:
       - kservice
       - ksvc
   scope: Namespaced
-
 ---
 # Copyright 2018 The Knative Authors
 #
@@ -632,7 +614,6 @@ spec:
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
 apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
@@ -669,5 +650,3 @@ spec:
         - name: Image
           type: string
           jsonPath: .spec.image
-
----

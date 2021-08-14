@@ -1,4 +1,3 @@
----
 apiVersion: security.cloud.google.com/v1alpha1
 kind: IdentityProvider
 metadata:

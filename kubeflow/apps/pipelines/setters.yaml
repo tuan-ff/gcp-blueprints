@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: setters
+data:
+  name: KUBEFLOW-NAME
+  bucket-name: BUCKET-NAME
+  cloudsql-name: CLOUDSQL-NAME
+  gcloud.compute.region: REGION
+  gcloud.compute.zone: ZONE
+  gcloud.core.project: PROJECT
+  mgmt-ctxt: MANAGEMENT-CTXT
